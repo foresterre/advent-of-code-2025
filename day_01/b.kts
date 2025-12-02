@@ -12,9 +12,9 @@ L99
 R14
 L82"""
 
-data class Dial(val position: Int, val clicks: Int)
-
 val actualInput = File("../input/01.txt").bufferedReader().readText().trim()
+
+data class Dial(val position: Int, val clicks: Int)
 
 fun solution(start: Int = 50, size: Int = 100): Int {
     return actualInput.lineSequence()
@@ -39,7 +39,6 @@ fun solution(start: Int = 50, size: Int = 100): Int {
             } else {
                 (device.position + steps).floorDiv(size)
             }
-
 
             println("${device.position} + $steps // $size = ${device.position + steps} // $size = ${(device.position + steps).floorDiv(size)}")
             Dial(r, clicks)
