@@ -17,7 +17,7 @@ fun invalid(id: Long): Boolean {
 
 fun solution(input: String = exampleInput): Long {
     return input.trimEnd().splitToSequence(',')
-        .map { it.split("-").let { it[0].toLong()..it[1].toLong() } }
+        .map { range -> range.split("-").let { it[0].toLong()..it[1].toLong() } }
         .flatMap { range -> range.filter { invalid(it) } }
         .sum()
 }
