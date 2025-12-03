@@ -1,5 +1,4 @@
 import java.io.File
-import kotlin.math.absoluteValue
 
 val exampleInput = """L68
 L30
@@ -40,7 +39,13 @@ fun solution(start: Int = 50, size: Int = 100): Int {
                 (device.position + steps).floorDiv(size)
             }
 
-            println("${device.position} + $steps // $size = ${device.position + steps} // $size = ${(device.position + steps).floorDiv(size)}")
+            println(
+                "${device.position} + $steps // $size = ${device.position + steps} // $size = ${
+                    (device.position + steps).floorDiv(
+                        size
+                    )
+                }"
+            )
             Dial(r, clicks)
         }
         .sumOf { it.clicks }

@@ -11,7 +11,7 @@ L99
 R14
 L82"""
 
-val actualInput = File("../input/01.txt").bufferedReader().readText().trim();
+val actualInput = File("../input/01.txt").bufferedReader().readText().trim()
 
 
 fun solution(start: Int = 50, size: Int = 100): Int {
