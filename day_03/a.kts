@@ -9,7 +9,6 @@ val exampleInput =
 
 val actualInput = File("../input/03.txt").bufferedReader().readText().trim()
 
-
 fun solution(input: String = exampleInput): Int {
     return input.trim().lineSequence()
         .map { line ->
